@@ -2,26 +2,27 @@
 
 
 #**Rental Kendaraan**
+
 #Fitur Utama & Konsep OOP yang Diterapkan
 
 Sistem ini mengimplementasikan pilar-pilar utama Pemrograman Berorientasi Objek secara komprehensif:
 
 1. **Inheritance (Pewarisan):**
-   * Terdapat *Superclass* induk bernama `Kendaraan` yang mewariskan atribut dasar kepada *Subclass* anak (`Mobil` dan `Motor`) menggunakan keyword `extends`.
+   * Terdapat *Superclass* induk bernama Kendaraan yang mewariskan atribut dasar kepada *Subclass* anak (Mobil dan Motor) menggunakan keyword extends.
 2. **Encapsulation (Enkapsulasi) & Access Modifier:**
-   * Seluruh atribut penting (seperti merk, plat nomor, dan tarif) dideklarasikan sebagai `private` untuk menjaga integritas data.
-   * Akses baca/tulis diatur menggunakan metode `getter` dan `setter` yang dilengkapi validasi data masukan.
-3. **Keyword `this` dan `super`:**
-   * Penggunaan `this` untuk mengatasi konflik penamaan variabel lokal dan atribut class.
-   * Penggunaan `super` di dalam konstruktor subclass untuk mewarisi dan menginisialisasi properti dari superclass.
+   * Seluruh atribut penting (seperti merk, plat nomor, dan tarif) dideklarasikan sebagai private untuk menjaga integritas data.
+   * Akses baca/tulis diatur menggunakan metode getter dan setter yang dilengkapi validasi data masukan.
+3. **Keyword this dan super:**
+   * Penggunaan this untuk mengatasi konflik penamaan variabel lokal dan atribut class.
+   * Penggunaan super di dalam konstruktor subclass untuk mewarisi dan menginisialisasi properti dari superclass.
 4. **Static Member:**
-   * Variabel `totalKendaraanTerdaftar` berstatus `static` untuk mencatat jumlah akumulasi objek kendaraan yang berhasil dibuat secara global.
+   * Variabel totalKendaraanTerdaftar berstatus static untuk mencatat jumlah akumulasi objek kendaraan yang berhasil dibuat secara global.
 5. **Method Overloading & Overriding:**
-   * **Overriding (`@Override`):** Subclass menimpa method `tampilkanInfo()` dan `simulasiRental()` milik induk agar sesuai dengan spesifikasi khusus kendaraan.
-   * **Overloading:** Terdapat dua fungsi pencarian `cariKendaraan` dengan parameter input yang berbeda (berdasarkan Plat Nomor bertipe `String` dan berdasarkan Batas Tarif bertipe `double`).
+   * **Overriding (@Override):** Subclass menimpa method tampilkanInfo() dan simulasiRental() milik induk agar sesuai dengan spesifikasi khusus kendaraan.
+   * **Overloading:** Terdapat dua fungsi pencarian cariKendaraan dengan parameter input yang berbeda (berdasarkan Plat Nomor bertipe String dan berdasarkan Batas Tarif bertipe double).
 6. **Struktur Kontrol & I/O:**
-   * Membaca masukan interaktif konsol menggunakan kelas `Scanner`.
-   * Menggunakan perulangan `while` dan `for`, percabangan `switch-case` serta `if-else`, dan penyimpanan objek ke dalam struktur data **Array**.
+   * Membaca masukan interaktif konsol menggunakan kelas Scanner.
+   * Menggunakan perulangan while dan for, percabangan switch-case serta if-else, dan penyimpanan objek ke dalam struktur data Array.
 
 ---
 
