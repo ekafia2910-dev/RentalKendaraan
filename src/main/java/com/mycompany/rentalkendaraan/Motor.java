@@ -2,27 +2,11 @@ package com.mycompany.rentalkendaraan;
 
 public class Motor extends Kendaraan {
     private int kapasitasMesinCC;
-    private String tipeBagasi; 
+    private String tipeBagasi;
 
     public Motor(String merk, String platNomor, double tarifPerHari, int kapasitasMesinCC, String tipeBagasi) {
         super(merk, platNomor, tarifPerHari);
         this.kapasitasMesinCC = kapasitasMesinCC;
-        this.tipeBagasi = tipeBagasi;
-    }
-
-    public int getKapasitasMesinCC() {
-        return this.kapasitasMesinCC;
-    }
-
-    public void setKapasitasMesinCC(int kapasitasMesinCC) {
-        this.kapasitasMesinCC = kapasitasMesinCC;
-    }
-
-    public String getTipeBagasi() {
-        return this.tipeBagasi;
-    }
-
-    public void setTipeBagasi(String tipeBagasi) {
         this.tipeBagasi = tipeBagasi;
     }
 
