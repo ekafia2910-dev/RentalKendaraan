@@ -1,6 +1,6 @@
 package com.mycompany.rentalkendaraan;
 
-public class Motor extends Kendaraan {
+public class Motor extends Kendaraan implements DapatDiservice {
     private int kapasitasMesinCC;
     private String tipeBagasi;
 
@@ -20,4 +20,15 @@ public class Motor extends Kendaraan {
     public void simulasiRental() {
         System.out.println("-> Syarat Rental Motor: Wajib melampirkan SIM C dan helm disediakan 2 buah.");
     }
+    
+    @Override
+    public void hitungPajakKendaraan() {
+        System.out.println("-> Pajak Kendaraan: Rp 250.000 / tahun (Kategori Motor).");
+    }
+
+    @Override
+    public void servisRutin() {
+        System.out.println("-> Status Servis: Wajib ganti oli setiap 2.000 km.");
+    }
+
 }

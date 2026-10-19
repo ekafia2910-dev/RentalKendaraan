@@ -1,6 +1,6 @@
 package com.mycompany.rentalkendaraan;
 
-public class Kendaraan {
+public abstract class Kendaraan {
     private String merk;
     private String platNomor;
     private double tarifPerHari;
@@ -35,4 +35,7 @@ public class Kendaraan {
     public void simulasiRental() {
         System.out.println("-> Simulasi: Kendaraan siap disewa.");
     }
+    
+    public abstract void hitungPajakKendaraan();
+
 }

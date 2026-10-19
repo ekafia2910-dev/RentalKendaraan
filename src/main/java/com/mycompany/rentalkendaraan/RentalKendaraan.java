@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class RentalKendaraan {
 
-
     public static void cariKendaraan(String platKeyword, Kendaraan[] daftar, int total) {
         System.out.println("\n--- Hasil Pencarian Berdasarkan Plat Nomor: \"" + platKeyword + "\" ---");
         boolean ditemukan = false;
@@ -42,7 +41,6 @@ public class RentalKendaraan {
         daftarKendaraan[jumlahKendaraan++] = new Mobil("Toyota Avanza", "B1234XYZ", 350000.0, 4, "Otomatis");
         daftarKendaraan[jumlahKendaraan++] = new Motor("Honda Beat", "BE5678AB", 90000.0, 110, "Standar");
         daftarKendaraan[jumlahKendaraan++] = new Truk("Hino Dutro", "B9999CD", 800000.0, 5.5);
-        daftarKendaraan[jumlahKendaraan++] = new Mobil("Honda Civic", "D9999AA", 750000.0, 4, "Manual");
 
         System.out.println("==================================================");
         System.out.println("    SELAMAT DATANG DI SISTEM RENTAL KENDARAAN!    ");
@@ -51,7 +49,7 @@ public class RentalKendaraan {
         while (isRunning) {
             System.out.println("\nMenu Utama:");
             System.out.println("1. Tambah Kendaraan Baru");
-            System.out.println("2. Lihat Daftar Kendaraan & Simulasi Rental");
+            System.out.println("2. Lihat Daftar Kendaraan & Info Status");
             System.out.println("3. Cari Kendaraan (Overloading)");
             System.out.println("4. Keluar");
             System.out.print("Pilih Menu (1-4): ");
@@ -113,9 +111,22 @@ public class RentalKendaraan {
                     } else {
                         for (int i = 0; i < jumlahKendaraan; i++) {
                             System.out.print((i + 1) + ". ");
+                            
                             daftarKendaraan[i].tampilkanInfo(); 
                             prosesRental(daftarKendaraan[i]);
-                            System.out.println();
+                            
+                            daftarKendaraan[i].hitungPajakKendaraan();
+
+                            if (daftarKendaraan[i] instanceof DapatDiasuransikan) {
+                                DapatDiasuransikan itemAsuransi = (DapatDiasuransikan) daftarKendaraan[i];
+                                itemAsuransi.prosesAsuransi();
+                            }
+                            
+                            if (daftarKendaraan[i] instanceof DapatDiservice) {
+                                DapatDiservice itemServis = (DapatDiservice) daftarKendaraan[i];
+                                itemServis.servisRutin();
+                            }
+                            System.out.println(); 
                         }
                         System.out.println("Total Kendaraan: " + Kendaraan.totalKendaraanTerdaftar);
                     }
